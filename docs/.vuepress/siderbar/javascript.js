@@ -1,7 +1,7 @@
 module.exports = [
   {
-    title: "JavaScript",
+    title: "JS",
     collapsable: false,
-    children: [""]
+    children: ["", "microtasks", "module"]
   }
 ];

@@ -19,6 +19,7 @@
 ## Blog
 
 - [记录前端开发中的技巧以及算法知识](https://github.com/louzhedong/blog)
+- [缓存](https://www.jianshu.com/p/54cc04190252)
 
 ## 异步
 
