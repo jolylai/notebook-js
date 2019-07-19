@@ -2,6 +2,6 @@ module.exports = [
   {
     title: "JS",
     collapsable: false,
-    children: ["", "microtasks", "module"]
+    children: ["", "microtasks", "module", "debounce", "throttle"]
   }
 ];

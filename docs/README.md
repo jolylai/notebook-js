@@ -2,7 +2,7 @@
 home: true
 heroImage: /hero.png
 actionText: 快速上手 →
-actionLink: /antd/
+actionLink: /javascript/
 features:
   - title: JavaScript
     details: JavaScript 知识点学习
