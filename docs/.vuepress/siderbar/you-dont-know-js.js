@@ -2,7 +2,7 @@ module.exports = [
   {
     title: "异步",
     collapsable: false,
-    children: ["generator"]
+    children: ["iterator", "generator"]
   },
   {
     title: "ES6",
