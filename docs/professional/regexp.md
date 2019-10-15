@@ -228,3 +228,10 @@ console.log(ret.index + "\t" + reg.lastIndex); //1  0
   return group1 + group3;
 }); //"12b34d5e"
 ```
+
+## 省市区
+```js
+const reg = /([^省]+省)([^市]+市)([^区]+区)(.*)/;
+const address = '福建省厦门市思明区'
+const [input, province, city, area] = address.match(reg)
+```
