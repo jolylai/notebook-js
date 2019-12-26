@@ -1,23 +1,26 @@
 sudo: required
 services:
-  - docker
+- docker
 language: node_js
 node_js: 10
 branches:
   only:
-    - master
+  - master
 install:
-  - yarn install
+- yarn install
 script:
-  - yarn run docs:build
-  - docker build -t jolylai/notebook-js .
-  - docker login -u $DOCKER_NAME -p $DOCKER_PASSWORD
-  - docker push jolylai/notebook-js
+- yarn run docs:build
+- docker build -t jolylai/notebook-js .
+- docker login -u $DOCKER_NAME -p $DOCKER_PASSWORD
+- docker push jolylai/notebook-js
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  github-token: "$GITHUB_TOKEN"
   keep-history: true
   local_dir: docs/.vuepress/dist
   on:
     branch: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_2a01126f8b17_key -iv $encrypted_2a01126f8b17_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
