@@ -1,3 +1,6 @@
+sudo: required
+services:
+  - docker
 language: node_js
 node_js: 10
 branches:
@@ -7,6 +10,9 @@ install:
   - yarn install
 script:
   - yarn run docs:build
+  - docker build -t jolylai/notebook-js .
+  - docker login -u $DOCKER_NAME -p $DOCKER_PASSWORD
+  - docker push jolylai/notebook-js
 deploy:
   provider: pages
   skip-cleanup: true
