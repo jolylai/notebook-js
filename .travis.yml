@@ -27,4 +27,4 @@ deploy:
   on:
     branch: master
 after_deploy:
-  - ssh root@"$HOST" "/root/deploy/notebook-js.sh"
+  - ssh root@"$HOST" -o StrictHostKeyChecking=no '/root/deploy/notebook-js.sh'
