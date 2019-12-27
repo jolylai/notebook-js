@@ -1,0 +1,10 @@
+version: "1.0.0"
+
+services:
+  notebook-js:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jolylai/notebook-js:latest
+    ports:
+      - "8080:8080"
