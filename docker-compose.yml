@@ -7,4 +7,4 @@ services:
       dockerfile: Dockerfile
     image: jolylai/notebook-js:latest
     ports:
-      - "80:8002"
+      - "8002:8002"
