@@ -28,6 +28,5 @@ deploy:
     branch: master
 after_deploy:
   - chmod 600 ~/.ssh/id_rsa
-  # - ssh root@"$HOST" -o StrictHostKeyChecking=no '/root/deploy/notebook-js.sh'
   - scp -o "StrictHostKeyChecking no" -i id_rsa docker-compose.yml root@$HOST:/root/deploy
   - ssh -o "StrictHostKeyChecking no" -i id_rsa root@$HOST "cd /root/deploy/;sudo docker-compose -f docker-compose.yml pull;sudo docker-compose -f docker-compose.yml up -d;exit"
